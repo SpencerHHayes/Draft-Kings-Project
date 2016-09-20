@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class Driver {
 
 	public static void main(String[] args) throws IOException {
-		//TEST COMMENT
 		// Acquire Necessary Optimization Count
 		long startTime = System.currentTimeMillis();
 		System.out.println("How many optimizations would you like carried out?");
