@@ -66,7 +66,7 @@ public class FootballTeam {
 				 * temp.setNextGame(playerLine[3]);
 				 * temp.setAverageHisPoints(Double.parseDouble(playerLine[4]));
 				 * temp.setTeam(playerLine[5]);
-				 * 
+				 *
 				 * list.add(temp);
 				 */
 
@@ -129,42 +129,30 @@ public class FootballTeam {
 		}
 
 		int numSim = 0;
-		String t1, t2, t3, t4, t5, t6, t7, t8, t9;
-		t1 = footballTeam.getTeamList().get(0).getTeam();
-		t2 = footballTeam.getTeamList().get(1).getTeam();
-		t3 = footballTeam.getTeamList().get(2).getTeam();
-		t4 = footballTeam.getTeamList().get(3).getTeam();
-		t5 = footballTeam.getTeamList().get(4).getTeam();
-		t6 = footballTeam.getTeamList().get(5).getTeam();
-		t7 = footballTeam.getTeamList().get(6).getTeam();
-		t8 = footballTeam.getTeamList().get(7).getTeam();
-		t9 = footballTeam.getTeamList().get(8).getTeam();
-
-		if (t1.equalsIgnoreCase(t2))
-			numSim++;
-		if (t1.equalsIgnoreCase(t3))
-			numSim++;
-		if (t1.equalsIgnoreCase(t4))
-			numSim++;
-		if (t1.equalsIgnoreCase(t5))
-			numSim++;
-		if (t1.equalsIgnoreCase(t6))
-			numSim++;
-		if (t1.equalsIgnoreCase(t7))
-			numSim++;
-		if (t1.equalsIgnoreCase(t8))
-			numSim++;
-		if (t1.equalsIgnoreCase(t9))
-			numSim++;
-
-		if (numSim == 3)
-			tempTeamPoints -= 3;
-		if (numSim == 4)
-			tempTeamPoints -= 7;
-		if (numSim == 5)
-			tempTeamPoints -= 10;
-		if (numSim == 6)
-			tempTeamPoints -= 15;
+		String[] teams = new String[8];
+		for (int i=0; i<8; i++) {
+			teams[i] = footballTeam.getTeamList().get(i).getTeam();
+			if (i > 0) {
+				if (teams[0].equalsIgnoreCase(teams[i]))
+					numSim++;
+			}
+		}
+			switch (numSim) {
+				case 3 :
+					tempTeamPoints -= 3;
+					break;
+				case 4 :
+					tempTeamPoints -= 7;
+					break;
+				case 5 :
+					tempTeamPoints -= 10;
+					break;
+				case 6 :
+					tempTeamPoints -= 15;
+					break;
+				default :
+					break;
+			}
 		return tempTeamPoints;
 
 	}
@@ -177,42 +165,30 @@ public class FootballTeam {
 		}
 
 		int numSim = 0;
-		String t1, t2, t3, t4, t5, t6, t7, t8, t9;
-		t1 = footballTeam.getTeamList().get(0).getTeam();
-		t2 = footballTeam.getTeamList().get(1).getTeam();
-		t3 = footballTeam.getTeamList().get(2).getTeam();
-		t4 = footballTeam.getTeamList().get(3).getTeam();
-		t5 = footballTeam.getTeamList().get(4).getTeam();
-		t6 = footballTeam.getTeamList().get(5).getTeam();
-		t7 = footballTeam.getTeamList().get(6).getTeam();
-		t8 = footballTeam.getTeamList().get(7).getTeam();
-		t9 = footballTeam.getTeamList().get(8).getTeam();
-
-		if (t1.equalsIgnoreCase(t2))
-			numSim++;
-		if (t1.equalsIgnoreCase(t3))
-			numSim++;
-		if (t1.equalsIgnoreCase(t4))
-			numSim++;
-		if (t1.equalsIgnoreCase(t5))
-			numSim++;
-		if (t1.equalsIgnoreCase(t6))
-			numSim++;
-		if (t1.equalsIgnoreCase(t7))
-			numSim++;
-		if (t1.equalsIgnoreCase(t8))
-			numSim++;
-		if (t1.equalsIgnoreCase(t9))
-			numSim++;
-
-		if (numSim == 3)
-			tempTeamPoints -= 3;
-		if (numSim == 4)
-			tempTeamPoints -= 7;
-		if (numSim == 5)
-			tempTeamPoints -= 10;
-		if (numSim == 6)
-			tempTeamPoints -= 15;
+		String[] teams = new String[8];
+		for (int i=0; i<8; i++) {
+			teams[i] = footballTeam.getTeamList().get(i).getTeam();
+			if (i > 0) {
+				if (teams[0].equalsIgnoreCase(teams[i]))
+					numSim++;
+			}
+		}
+			switch (numSim) {
+				case 3 :
+					tempTeamPoints -= 3;
+					break;
+				case 4 :
+					tempTeamPoints -= 7;
+					break;
+				case 5 :
+					tempTeamPoints -= 10;
+					break;
+				case 6 :
+					tempTeamPoints -= 15;
+					break;
+				default :
+					break;
+			}
 		return tempTeamPoints;
 
 	}
